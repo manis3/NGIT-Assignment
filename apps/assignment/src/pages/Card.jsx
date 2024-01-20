@@ -29,7 +29,7 @@ const ModalCard = ({ count, userDetails, isLoading }) => {
     <div>
       <Card className="w-[320px] card">
         <CardHeader>
-          <CardTitle className='flex justify-between'>{`${count} birthdays today`} </CardTitle>
+          <CardTitle>{`${count} birthdays today`}</CardTitle>
         </CardHeader>
         <CardContent
           className={`m-2 card-content ${
