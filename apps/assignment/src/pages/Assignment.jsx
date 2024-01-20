@@ -12,7 +12,7 @@ import {
     Avatar,
     AvatarFallback,
     AvatarImage,
-  } from "@/components/ui/avatar"
+  } from "../components/ui/avatar"
 import Modal from "../../../../assignment-ui/src/Modal";
 import { fetchData } from "../apis/api";
 
