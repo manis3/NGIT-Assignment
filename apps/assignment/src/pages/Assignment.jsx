@@ -4,18 +4,24 @@ import { Button } from "../components/ui/button"
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "../components/ui/card"
+import {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+  } from "@/components/ui/avatar"
 import Modal from "../../../../assignment-ui/src/Modal";
 import { fetchData } from "../apis/api";
 
 import '../../../../assignment-ui/src/styles/Modal.css'
 
+
 const Assignment = () => {
-  const { isLoading, isError } = useQuery({
+    const count  = 15;
+  const {data, isLoading, isError } = useQuery({
     queryFn: () => fetchData(),
     queryKey: ["userData"],
   });
@@ -24,51 +30,33 @@ const Assignment = () => {
       <Modal>
         {isLoading && <p>Loading Skeleton...</p>}
         {isError && <p>Error fetching data...</p>}
-        {/* <div className="card">
-          <h3>Your Assignment App</h3>
-          <div className="card-content">
-            {data && (
+         <Card className="w-[320px] card">
+      <CardHeader>
+        <CardTitle>{`${count} birthdays today`}</CardTitle>
+      </CardHeader>
+      <CardContent className='m-2'>
+      {data && (
               <ul>
                 {data.map((item) => (
-                  <li key={item.user_id}>{item.given_name}</li>
+                  <li key={item.user_id}><div className="flex gap-4 mt-3">
+                  <Avatar>
+                <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div>
+                  <h4>{item.name}</h4>
+                  <p>{item.given_name}</p>
+              </div>
+                  </div></li>
                 ))}
               </ul>
             )}
-          </div>
-          <div className="card-button"></div>
-        </div> */}
-         <Card className="w-[350px]">
-      <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              {/* <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" /> */}
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              {/* <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select> */}
-            </div>
-          </div>
-        </form>
+        
+      
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
+      <CardFooter>
+        
+        <Button className='w-full p-6 button'>View all</Button>
       </CardFooter>
     </Card>
       </Modal>
