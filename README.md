@@ -29,6 +29,11 @@ List the key features of your project.
 ```bash
 # Example installation command
 npm install
+
+#Run json server
+
+#Navigate to the file where the json file is located (cd apps -> assignment -> src -> assets)
+json-server --watch userData.json --port 3040
 ```
 ## Preview
 ![Preview](https://github.com/manis3/NGIT-Assignment/blob/master/Screenshot/SC.JPG)
