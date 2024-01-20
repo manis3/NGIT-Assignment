@@ -31,4 +31,4 @@ List the key features of your project.
 npm install
 ```
 ## Preview
-![Preview](Screenshot/SC.jpg)
+![Preview](https://github.com/manis3/NGIT-Assignment/blob/master/Screenshot/SC.JPG)
