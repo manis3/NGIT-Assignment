@@ -1,6 +1,6 @@
-export const fetchData = async () => {
+export const fetchData = async (api) => {
   try {
-    const res = await fetch("http://localhost:3040/datas");
+    const res = await fetch(api);
     const jsonData = await res.json();
     return jsonData;
   } catch (error) {

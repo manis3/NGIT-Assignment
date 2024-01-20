@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 import Modal from "../../../../assignment-ui/src/Modal";
@@ -11,12 +11,18 @@ import ModalCard from "./Card";
 const Assignment = () => {
   const [userDetails, setUserDetails] = useState([]);
   const [count, setCount] = useState(null);
+
+  const fetchDataMemonized = useMemo(
+    async () => await fetchData("http://localhost:3040/datas"),
+    []
+  );
+  
   const { data, isLoading } = useQuery({
-    queryFn: () => fetchData(),
+    queryFn: () => fetchDataMemonized,
     queryKey: ["userData"],
   });
 
-  useEffect(() => {
+  const seperateUserDetailsForBirthday = () => {
     data &&
       data.map((item) => {
         let { age, isBirthdayToday } = calculateAge({
@@ -30,6 +36,10 @@ const Assignment = () => {
           ]);
         }
       });
+  };
+
+  useEffect(() => {
+    seperateUserDetailsForBirthday();
   }, [data]);
 
   return (

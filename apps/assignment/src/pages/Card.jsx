@@ -12,7 +12,7 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const ModalCard = ({ count, userDetails, isLoading }) => {
-  const [isViewAll, setIsViewAll] = useState(false);
+  const [isViewAll, setIsViewAll] = useState(true);
   const [data, setData] = useState([]);
   useEffect(() => {
     handleClick();
