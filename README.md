@@ -31,4 +31,4 @@ List the key features of your project.
 npm install
 ```
 ## Preview
-![](Screenshot/SC.jpeg)
+![Preview](Screenshot/SC.jpg)
