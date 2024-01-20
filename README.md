@@ -29,7 +29,6 @@ List the key features of your project.
 ```bash
 # Example installation command
 npm install
-
+```
 ## Preview
-
-![](Screenshot/sc.jpg)
+![](Screenshot/SC.jpeg)
