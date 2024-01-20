@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.card-container {
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #f089b1;
+    display: grid;
+}
+
+.card-body {
+    place-self: center;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 58px 50px 25px #e3749f;
+    outline: 5px solid transparent;
+    z-index: 1;
+}
+
+.card {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.card-content {
+    flex-basis: 90%;
+    background: black;
+}
+
+.card-button {
+    flex-basis: 10%; 
+    margin-top: auto;
+    
+}

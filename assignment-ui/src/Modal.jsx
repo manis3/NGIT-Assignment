@@ -1,13 +1,11 @@
-import React from 'react'
-
-const Modal = ({children}) => {
+import React from "react";
+import "./styles/Modal.css";
+const Modal = ({ children }) => {
   return (
-    <div className='modal-container'>
-        <div className='modal'>
-            {children}
-        </div>
+    <div className="card-container">
+      <div className="card-body">{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
