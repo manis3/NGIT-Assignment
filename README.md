@@ -31,4 +31,5 @@ List the key features of your project.
 npm install
 
 ## Preview
+
 ![](Screenshot/sc.jpg)
