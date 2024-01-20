@@ -1,8 +1,35 @@
-# React + Vite
+# Project Name
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NGIT_Assignment:
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Introduction](#introduction)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+
+## Introduction
+
+This is a project for the fulfillment of an assignment assign by NGIT.
+
+## Features
+
+List the key features of your project.
+
+- Create a ui package named assignment-ui.
+- Add tailwindcsss.
+- Add shadcn ui.
+- Add a modal component. The modal component should allow children as props which will be the skeleton while fetching and the list after fetching. 
+    The children will be     provided in the assignment app from its parent.
+- Create a vite-react app inside apps named assignment.
+- Use the imported modal in the app.
+- Use react query to fetch fake JSON data and fill the modal.
+- Add skeletons for the loading state.
+
+## Installation
+
+
+```bash
+# Example installation command
+npm install
