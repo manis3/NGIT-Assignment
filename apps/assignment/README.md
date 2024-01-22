@@ -27,7 +27,7 @@ List the key features of your project.
 - 
 ## Installation
 ```bash
-# Example installation command
+# first clone the project and run command below in both the packages
 npm install
 
 #Run json server
